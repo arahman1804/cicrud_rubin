@@ -1,1 +1,1 @@
-# cicrud_rubin
+Berisi latihan CI crud rubin
