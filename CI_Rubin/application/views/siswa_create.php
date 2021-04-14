@@ -8,8 +8,8 @@
         <div class="modal-body">
 
             <div class="card-body">
-
-            <form action="<?php echo base_url(); ?>siswa/save" method="post">
+        
+            <form action="<?php echo base_url(); ?>index.php/siswa/save" method="post">
                 <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" name="nama" id="nama" >
@@ -29,8 +29,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="tgl_lahir">Tanggal Lahir</label>
-                    <input type="text" class="form-control datepicker" name="tanggal_lahir" id="tanggal_lahir" >
+                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                    <input type="date" class="form-control datepicker" id="tanggal_lahir" name="tanggal_lahir">
                 </div>
 
                 <div class="form-group">

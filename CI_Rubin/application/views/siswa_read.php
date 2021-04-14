@@ -6,8 +6,8 @@
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
 				  Create
 				</button>
-				<br/>
-				<br/>
+				</br>
+				</br>
 				<table class="table table-bordered">
 					<tr>
 						<th width="5%">No</th>
@@ -44,4 +44,4 @@
 			</div>
 		</div>
 </main>
-
+<?php $this->load->view('siswa_create'); ?>

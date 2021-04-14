@@ -14,8 +14,8 @@ class Siswa extends CI_Controller {
 	{
 		$data['siswa'] = $this->m_siswa->getAll();
 		$data['content'] = 'siswa_read';
-		
-		$this->load->view('lib/content',$data);
+		$this->load->view('lib/header');
+		$this->load->view('lib/content',$data);   
 		
 	}
 
@@ -23,8 +23,9 @@ class Siswa extends CI_Controller {
     {
         $data['content'] = 'siswa_create';
         
-        $this->load->view('lib/content',$data);
+		$this->load->view('lib/content',$data);   
     }
+
     public function save()
     {
         $data['nama'] = $this->input->post('nama');
@@ -34,7 +35,7 @@ class Siswa extends CI_Controller {
         $data['no_telp'] = $this->input->post('no_telp');
         $data['alamat'] = $this->input->post('alamat');
         $this->m_siswa->save($data);
-        redirect('siswa');
+        redirect('index.php/siswa');
     }
 
     function edit($kd_siswa)
@@ -55,12 +56,12 @@ class Siswa extends CI_Controller {
         $data['no_telp'] = $this->input->post('no_telp');
         $data['alamat'] = $this->input->post('alamat');
         $this->m_siswa->update($data,$kd_siswa);
-        redirect('siswa');
+        redirect('index.php/siswa');
     }
     function delete($kd_siswa)
     {
         $this->m_siswa->delete($kd_siswa);
-        redirect('siswa');
+        redirect('index.php/siswa');
     }
 
 }
